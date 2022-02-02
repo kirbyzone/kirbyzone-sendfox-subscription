@@ -1,6 +1,6 @@
 {
     "name": "kirbyzone/sendfox",
-    "description": "Email Subscription Plugin",
+    "description": "a plugin to help you interact with the SendFox API from your Kirby 3 web site",
     "type": "kirby-plugin",
     "license": "MIT",
     "authors": [
