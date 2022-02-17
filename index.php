@@ -25,9 +25,8 @@ Kirby::plugin('kirbyzone/sendfox', [
             }else{
                 if(isset($dataArr['email'])){
                     if(!V::email($dataArr['email'])) { 
-                        $status = false;
                         $msg = 'Email is not correct';
-                        return ['status'=>$status, 'msg'=>$msg];
+                        return ['status'=>false, 'msg'=>$msg];
                     }
                 }
             }
@@ -89,7 +88,7 @@ Kirby::plugin('kirbyzone/sendfox', [
                 return ['status'=>false, 'msg'=>$e->getMessage()];
             }
 
-            return ['status'=>false, 'msg'=>$msg];;
+            return ['status'=>$status, 'msg'=>$msg];;
         }
     ]
 ]);
